@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/dooduang', 'DooduangController@index')->name('dooduang.index');
+Route::get('/random-card', 'DooduangController@randomCard')->name('dooduang.random-card');
