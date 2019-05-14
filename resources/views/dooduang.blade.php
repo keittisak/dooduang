@@ -157,7 +157,8 @@
             }
             var cards = JSON.parse($("#cards").val());
             $.ajax({
-                url:`{{route('card.used')}}`,
+                {{--  url:`{{route('card.used')}}`,  --}}
+                url:`https://murmuring-tor-92566.herokuapp.com/card/used`,
                 method:`GET`,
                 type:`JSON`,
                 data:{cards:cards}
