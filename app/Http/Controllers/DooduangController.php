@@ -24,8 +24,53 @@ class DooduangController extends Controller
         return response()-json($this->card);
     }
 
+    public function switchCard (Request $request)
+    {
+        $age = $request->age;
+        $card = $this->card;
+        shuffle($card);
+        for($i=1; $i <= $age; $i++)
+        {        
+            $i = rand(1,89);
+            $i = 100 - $i;
+            $cardSwitch = [];
+            for($i; $i <= 89;$i++)
+            {
+                $cardSwitch[$i] = $card[$i];
+                $card = array_except($card, [$i]);
+            }
+            $card = array_merge($cardSwitch, $card);
+        }
+        return response()->json($card);
+    }
+
+    public function usedCard (Request $request)
+    {
+        $cards = $request->cards;
+        $usedCards = [];
+        for($i=0;$i <=9;$i++)
+        {
+            $usedCards[] = $cards[$i];
+            unset($cards[$i]);
+        }
+        $cards = array_values($cards);
+        return response()->json(['cards' => $cards, 'used_cards' => $usedCards]);
+    }
+
     public function randomCard (Request $request)
     {
+        $card = [];
+        for($i=1; $i <= 90; $i++)
+        {
+            $card[] = [
+                'id' => $i,
+                'name' => 'card'.$i,
+                'info' => 'xxxx',
+                'img' => $i.'.jpg'
+            ];
+        }
+        echo json_encode($card);
+        exit();
         $card = [];
         for($i = 1; $i <= 10; $i++)
         {

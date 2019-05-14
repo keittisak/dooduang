@@ -17,3 +17,5 @@ Route::get('/', function () {
 
 Route::get('/dooduang', 'DooduangController@index')->name('dooduang.index');
 Route::get('/random-card', 'DooduangController@randomCard')->name('dooduang.random-card');
+Route::get('/card/switch', 'DooduangController@switchCard')->name('card.switch');
+Route::get('/card/used', 'DooduangController@usedCard')->name('card.used');
