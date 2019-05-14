@@ -193,6 +193,7 @@
                 $(".col").flip({
                     trigger: 'manual'
                 });
+                $(".result").attr('src',"{{asset('cards')}}/card_back.jpg");
 
             }).fail(function( jqxhr, textStatus ) {
                 alert('Error');
