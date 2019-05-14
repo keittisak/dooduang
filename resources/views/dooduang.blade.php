@@ -159,9 +159,9 @@
             $.ajax({
                 {{--  url:`{{route('card.used')}}`,  --}}
                 url:`https://murmuring-tor-92566.herokuapp.com/card/used`,
-                method:`GET`,
+                method:`POST`,
                 type:`JSON`,
-                data:{cards:cards}
+                data:{cards:cards,_token: "{{ csrf_token() }}"}
             }).done(function( res ) {
                 $("#cards").val(JSON.stringify(res.cards));
                 cardTotal = parseInt(cardTotal)-10;
