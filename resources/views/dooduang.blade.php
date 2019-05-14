@@ -134,7 +134,8 @@
             }
 
             $.ajax({
-                url:`{{route('card.switch')}}`,
+                {{--  url:`{{route('card.switch')}}`,  --}}
+                url:`https://murmuring-tor-92566.herokuapp.com/card/switch`,
                 method:`GET`,
                 type:`JSON`,
                 data:{age:age}
