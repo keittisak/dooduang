@@ -23,6 +23,7 @@
     }
     .col-card {
         margin:5px;
+        padding:0;
     }
     .result {
         width:260px;
@@ -92,7 +93,7 @@
         </div>  --}}
         <input type="hidden" value="" id="cards">
         <input type="hidden" value="" id="card-used">
-        <div id="box-show-card">
+        <div id="box-show-card" class="text-center">
         </div>
     </div>
 
@@ -255,8 +256,8 @@
                         element += `<div class="row">`;
                     }
                     
-                    element += ` <div class="col col-card" data-id="${card.id}" data-json='${JSON.stringify(card)}'>
-                            <center>${i}</center>
+                    element += ` <div class="col col-card"  data-id="${card.id}" data-json='${JSON.stringify(card)}'>
+                            <center><span class="badge badge-info mb-1">${i}</span></center>
                             <div class="front"> 
                                 <img src="${cardBack}" alt="..." class="img-thumbnail img-responsive">
                             </div> 
