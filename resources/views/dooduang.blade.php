@@ -31,7 +31,7 @@
         margin:5px;
     }
     @media (max-width: 768px) {
-        .modal-dialog{
+        .modal-xl{
             max-width:700px;
         }
       }
