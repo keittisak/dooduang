@@ -18,18 +18,23 @@
         background-size: cover;
     }  --}}
     .container .img-responsive {
-        width:200px;
-        max-height:200px;
+        width:180px;
+        height: auto;
     }
     .col-card {
         margin:5px;
         padding:0;
     }
     .result {
-        width:260px;
-        max-height:300px;
+        width:200px;
+        height: auto;
         margin:5px;
     }
+    @media (min-width: 576px) {
+        .modal-xl {
+
+          }
+      }
 </style>
 <body> 
     <div class="container mt-3">
@@ -98,7 +103,7 @@
     </div>
 
     <div class="modal fade" id="result-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Answer</h5>
