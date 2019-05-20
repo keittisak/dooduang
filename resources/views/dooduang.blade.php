@@ -128,7 +128,7 @@
             <div class="modal-body">
                 <center>
                     <h2><i class="fas fa-circle-notch fa-spin"></i></h2>
-                    <h4>Switch Card </h4>
+                    <h4>Loading</h4>
                 </center>
             </div>
             </div>
@@ -240,6 +240,7 @@
                 {{--  alert('การ์ดหมดแล้วนะจ๊ะคนสวย');
                 return false;  --}}
             }
+            $("#loading-modal").modal('show');
             var cards = JSON.parse($("#cards").val());
             $.ajax({
                 url:`{{route('card.used')}}`,
@@ -280,7 +281,9 @@
                     trigger: 'manual'
                 });
                 $(".result").attr('src',"{{asset('cards')}}/card_back.jpg");
-
+                setTimeout(function(){
+                    $("#loading-modal").modal('hide');
+                },1000);
             }).fail(function( jqxhr, textStatus ) {
                 alert('Error');
             });
