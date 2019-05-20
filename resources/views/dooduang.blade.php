@@ -30,10 +30,10 @@
         height: auto;
         margin:5px;
     }
-    @media (min-width: 576px) {
-        .modal-xl {
-
-          }
+    @media (max-width: 768px) {
+        .modal-dialog{
+            max-width:700px;
+        }
       }
 </style>
 <body> 
@@ -123,7 +123,7 @@
     </div>
 
     <div class="modal fade" id="loading-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
             <div class="modal-content">
             <div class="modal-body">
                 <center>
@@ -224,7 +224,7 @@
                 $(".answer-li").remove();
                 $("#box-show-card").html("");
                 setTimeout(function(){
-                    $("#loading-modal").modal('hide');
+                    {{--  $("#loading-modal").modal('hide');  --}}
                 },1000);
             }).fail(function( jqxhr, textStatus ) {
                 alert('Error');
