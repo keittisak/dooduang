@@ -84,9 +84,9 @@
                         <h5 class="card-header">การ์ดทั้งหมด <span id="card-total">0</span>/90</h5>
                         <div class="card-body">
                             <div class="text-center">
-                                <img src="{{asset('cards/card_back.jpg')}}" class="img-thumbnail result" alt="used 1" id="result-1">
-                                <img src="{{asset('cards/card_back.jpg')}}" class="img-thumbnail result" alt="used 2" id="result-2">
-                                <img src="{{asset('cards/card_back.jpg')}}" class="img-thumbnail result" alt="used 3" id="result-3">
+                                <img src="{{asset('cards/card_back.jpg')}}?v1" class="img-thumbnail result" alt="used 1" id="result-1">
+                                <img src="{{asset('cards/card_back.jpg')}}?v1" class="img-thumbnail result" alt="used 2" id="result-2">
+                                <img src="{{asset('cards/card_back.jpg')}}?v1" class="img-thumbnail result" alt="used 3" id="result-3">
                             </div>
                         </div>
                         <div class="card-footer text-center">
@@ -113,9 +113,9 @@
             </div>
             <div class="modal-body">
                 <div class="text-center">
-                    <img src="{{asset('cards/card_back.jpg')}}" class="img-thumbnail result" alt="used 1" id="result-1">
-                    <img src="{{asset('cards/card_back.jpg')}}" class="img-thumbnail result" alt="used 2" id="result-2">
-                    <img src="{{asset('cards/card_back.jpg')}}" class="img-thumbnail result" alt="used 3" id="result-3">
+                    <img src="{{asset('cards/card_back.jpg')}}?v1" class="img-thumbnail result" alt="used 1" id="result-1">
+                    <img src="{{asset('cards/card_back.jpg')}}?v1" class="img-thumbnail result" alt="used 2" id="result-2">
+                    <img src="{{asset('cards/card_back.jpg')}}?v1" class="img-thumbnail result" alt="used 3" id="result-3">
                 </div>
             </div>
             </div>
@@ -224,7 +224,7 @@
                 $(".answer-li").remove();
                 $("#box-show-card").html("");
                 setTimeout(function(){
-                    {{--  $("#loading-modal").modal('hide');  --}}
+                    $("#loading-modal").modal('hide');
                 },1000);
             }).fail(function( jqxhr, textStatus ) {
                 alert('Error');
@@ -265,10 +265,10 @@
                     element += ` <div class="col col-card"  data-id="${card.id}" data-json='${JSON.stringify(card)}'>
                             <center><span class="badge badge-info mb-1">${i}</span></center>
                             <div class="front"> 
-                                <img src="${cardBack}" alt="..." class="img-thumbnail img-responsive">
+                                <img src="${cardBack}?v1" alt="..." class="img-thumbnail img-responsive">
                             </div> 
                             <div class="back">
-                                <img src="${cardImg}" alt="..." class="img-thumbnail img-responsive">
+                                <img src="${cardImg}?v1" alt="..." class="img-thumbnail img-responsive">
                             </div> 
                         </div>`;
                         if (i % 5 == 0)
