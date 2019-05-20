@@ -76,7 +76,6 @@
                 <h2>Cards</h2>
             </div>
         </div>
-        <br>
         {{--  <div class="row d-none">
             <div class="col-md-12">
                 <div class="card-deck">
