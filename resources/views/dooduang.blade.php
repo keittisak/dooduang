@@ -159,7 +159,7 @@
             {
                 $(this).addClass('card-active');
                 $(this).flip(true);
-                var cardImg = "{{asset('cards')}}/"+$(this).data('json').img;
+                var cardImg = "{{asset('cards')}}/"+$(this).data('json').img+"?v1";
                 var i = cardActive+1;
                 var resultElement = $("#result-"+i);
                 resultElement.attr('alt',$(this).data('id'));
