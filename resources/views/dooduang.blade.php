@@ -228,7 +228,7 @@
                 $("#box-show-card").html("");
                 setTimeout(function(){
                     $("#loading-modal").modal('hide');
-                },1000);
+                },500);
             }).fail(function( jqxhr, textStatus ) {
                 alert('Error');
             });
@@ -286,7 +286,7 @@
                 $(".result").attr('src',"{{asset('cards')}}/card_back.jpg");
                 setTimeout(function(){
                     $("#loading-modal").modal('hide');
-                },1000);
+                },500);
             }).fail(function( jqxhr, textStatus ) {
                 alert('Error');
             });
