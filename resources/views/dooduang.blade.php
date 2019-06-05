@@ -33,13 +33,16 @@
     .modal-header{
         border:none;
     }
-    @media (max-width: 768px) {
+    @media screen and (max-width: 768px) {
         .modal-xl{
             max-width:700px;
         }
+        .result{
+            width: 180px;
+        }
       }
 
-    @media (max-width: 375px) {
+    @media screen and (max-width: 375px), screen and (max-width: 414px){
         .result{
             width: 90px;
         }
