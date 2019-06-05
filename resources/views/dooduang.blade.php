@@ -38,13 +38,19 @@
             max-width:700px;
         }
       }
+
+    @media (max-width: 375px) {
+        .result{
+            width: 90px;
+        }
+    }
 </style>
 <body> 
     <div class="container mt-3">
         <h2>WITCH CARD</h2>
         <br>
         <div class="row">
-            <div class="col-6">
+            <div class="col-md-6">
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">
@@ -62,14 +68,15 @@
 
                 <button class="btn btn-primary" type="button" id="switchCard">Switch Card</button>
             </div>
-            <div class="col-6">
+            <div class="col-md-6 col-sm-12">
                     <label class="col-form-label" >&nbsp;</label>
                 <ul class="list-group">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <div>Card Total <span id="card-total" class="ml-3">0</span>/90</div>
-                        <button type="button" class="btn btn-warning d-none" id="used-card">Use Card</button>
                     </li>
                 </ul>
+                <br>
+                <button type="button" class="btn btn-warning d-none" id="used-card">Use Card</button>
             </div>
         </div>
         <br>
@@ -79,25 +86,7 @@
                 <h2>Cards</h2>
             </div>
         </div>
-        {{--  <div class="row d-none">
-            <div class="col-md-12">
-                <div class="card-deck">
-                    <div class="card bg-light">
-                        <h5 class="card-header">การ์ดทั้งหมด <span id="card-total">0</span>/90</h5>
-                        <div class="card-body">
-                            <div class="text-center">
-                                <img src="{{asset('cards/card_back.jpg')}}?v1" class="img-thumbnail result" alt="used 1" id="result-1">
-                                <img src="{{asset('cards/card_back.jpg')}}?v1" class="img-thumbnail result" alt="used 2" id="result-2">
-                                <img src="{{asset('cards/card_back.jpg')}}?v1" class="img-thumbnail result" alt="used 3" id="result-3">
-                            </div>
-                        </div>
-                        <div class="card-footer text-center">
-                            <button type="button" class="btn btn-primary" id="used-card">ใช้การ์ด 10 ใบ</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>  --}}
+
         <input type="hidden" value="" id="cards">
         <input type="hidden" value="" id="card-used">
         <div id="box-show-card" class="text-center">
