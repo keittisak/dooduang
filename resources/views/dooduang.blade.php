@@ -43,6 +43,10 @@
       }
 
     @media screen and (max-width: 375px), screen and (max-width: 414px){
+        .modal-sm{
+            max-width:200px;
+            margin: auto;
+        }
         .result{
             width: 90px;
         }
